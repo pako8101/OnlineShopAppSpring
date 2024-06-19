@@ -5,6 +5,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import org.hibernate.validator.constraints.Length;
 
 import java.math.BigDecimal;
@@ -14,7 +15,7 @@ import java.math.BigDecimal;
 public class Offer extends BaseEntity{
 
     @NotNull
-    @Length(min = 2,max = 50)
+    @Size(min = 2,max = 50)
     private String description;
     @NotNull
     @Min(value = 0)

@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
             <ul class="navbar-nav row">
                 <li class="nav-item col-md-4">
-                    <span class="nav-link text-primary active h5 text-stroke" th:text="${@loggedUser.username}"></span>
+                    <span class="nav-link text-primary active h5 text-stroke" th:text="${@loggedUser.username}"> </span>
                 </li>
                 <li th:unless="${@loggedUser.isLogged}" class="nav-item col-md-4">
                     <a class="nav-link text-primary active h5 text-stroke" th:href="@{/login}">Login</a>
@@ -31,7 +31,7 @@
                 </li>
 
                 <li th:if="${@loggedUser.isLogged}" class="nav-item col-md-4">
-                    <form th:action="@{/logout}" method="post">
+                    <form th:action="@{/logout}">
                         <button type="submit" class="nav-link text-primary active h5 text-stroke" th:href="@{/logout}">
                             Logout
                         </button>
